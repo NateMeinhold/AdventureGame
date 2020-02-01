@@ -14,7 +14,7 @@ function getCurrentPage(slug){
 }
 
 
-// TODO: Create a function called `recordChoice()` that will accept a `slug`
+//Create a function called `recordChoice()` that will accept a `slug`
 // parameter and add it to the `choiceList` Array (probably using `push()`).
 function recordChoice(slug) {
     choiceList.push(slug);
@@ -65,38 +65,43 @@ function changePage(slug) {
 ////////////////////////////////////////////////////////////////////////////////
 
 var storyData = {
-    title: "The Crow and the Fox",
+    title: "Alone Aboard",
     p1: {
-        text: `You are a crow named ${playerName}. You are flying high above the
-                countryside. You see a farm off to the West, and your home forest
-                off to the East.`,
+        text: `"Oh my, you've met with a terrible fate, haven't you, ${playerName}?" The harsh voice said. You may not
+        remember. But I am here to help you.
+        <br><br>`,
+        reply:'"what is this place?"'
+        ,
         choices: [
             {
-                text: `Do Something Else`,
+                text: `Look Around`,
                 link: 'p2'
             }, {
-                text: `Fly back home to your nest in the forest.`,
-                link: 'homeEnd'
+                text: `Go back to sleep`,
+                link: 'sleepEnd'
             }
         ]
     },
-    homeEnd : {
-        text: `You return home to your comfy roost in the forest canopy and
-                enjoy a hot cup of tea!
+    sleepEnd : {
+        text: `"Leave me alone!" you yell at the voice and settle deeper into your covers. 
+                <br><br>
+                "As you wish," the voice answers. "I will be better not to know when they are coming. Especially when 
+                there is no one to save you." 
                 <br><br>
                 The End.`,
         choices: [
             {
-                text: `Play again?`,
+                text: `Try Again?`,
                 link: 'p1'
             }
         ]
     },
     p2 : {
-        text: `You fly over the Farm and see a piece of cheese lying on the
-                picnic table. There are no people around that you can see. The
-                cheese looks very tasty, but you are worried there might be a
-                person or, even worse, a CAT lurking somewhere you can't see.`,
+        text: `"Get out of bed, ${playerName}, there is not much time. The engines are damaged and power is shut off to the ship.
+        both systems are necessary for us to get underway. Which one will you fix first?"
+        <br><br>
+        You look at the tow hallways, one leads to Engineering, the other to the Airlock. Where are you going to go?
+        `,
         choices: [
             {
                 text: `Go for the cheese!`,
@@ -224,15 +229,14 @@ var storyData = {
 ///////////////////////////////////////////////////
 //////// Main Script /////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-// This script runs the game. You should only edit it if you are attempting a //
-// stretch goal. Otherwise, this script calls the functions that you have     //
-// created above.                                                             //
+// This script runs the game.                                                             //
 ////////////////////////////////////////////////////////////////////////////////
 
 let title = document.querySelector('#story-title');
 title.innerHTML = storyData.title;
 
 let pageContent = document.querySelector('#story-text');
+// let pageContent = document.querySelector('#story-reply');
 let choicesUL = document.querySelector('#choices');
 
 function updatePage(page) {

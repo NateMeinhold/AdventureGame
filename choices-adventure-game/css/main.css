@@ -2,6 +2,7 @@
 #story-text {
     font-weight: 300;
     font-size: 1.2rem;
+    /* animation: slide-left 10s; */
 }
 button#undo {
     border: none;
@@ -39,11 +40,13 @@ body {
     width: 80%;
     margin: 1rem auto;
     padding: 3rem 2rem;
-    background: #fafafa;
+    /* background: #fafafa; */
+    background: black;
+    opacity: 0.5;
     color: #666;
     font-family: Helvetica, Arial, sans-serif;
     border: 4px double #666;
 }
 html {
-    background: #e8e8e8 url('../images/vertical-waves.png') repeat;
+    background: #e8e8e8 url('../images/galaxy.jpg') no-repeat fixed center;
 }
