@@ -52,17 +52,6 @@ function changePage(slug) {
 ///////////////////////////////////////////////////
 //////// Story Data //////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-// Only edit this data to change/enhance the story. Be sure to watch for how  //
-// changes to the story data might affect the mechanisms that output the      //
-// story.                                                                     //
-////////////////////////////////////////////////////////////////////////////////
-// NOTE: The data below is organized as a JS Object. The content for each     //
-// page is stored using a "slug" -- a short alphanumeric identifier (for      //
-// example, "p1", "p2", "homeEnd", etc.). Each page contains a `text`         //
-// property and a `choices` property. The `choices` property is an Array that //
-// contains all of the choices, including the slug that each choice should    //
-// link to.                                                                   //
-////////////////////////////////////////////////////////////////////////////////
 
 var storyData = {
     title: "Alone Aboard",
