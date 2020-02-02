@@ -56,8 +56,9 @@ function changePage(slug) {
 var storyData = {
     title: "Alone Aboard",
     p1: {
-        text: `"Oh my, you've met with a terrible fate, haven't you, ${playerName}?" The harsh voice said. You may not
-        remember. But I am here to help you.
+        text: `"Oh my, you've met with a terrible fate, haven't you, ${playerName}?" The harsh voice said. “I am the ship’s onboard computer. 
+        You may not remember, but I am here to help you.”
+
         <br><br>`,
         reply:'"what is this place?"'
         ,
@@ -89,38 +90,43 @@ var storyData = {
         text: `"Get out of bed, ${playerName}, there is not much time. The engines are damaged and power is shut off to the ship.
         both systems are necessary for us to get underway. Which one will you fix first?"
         <br><br>
-        You look at the tow hallways, one leads to Engineering, the other to the Airlock. Where are you going to go?
+        You open the door to your cabin and look left and right. One way will take you to Engineering, the other to the Airlock. The ship trembles. You’ll have to work quickly. 
         `,
         choices: [
             {
-                text: `Go for the cheese!`,
+                text: `Space Walk`,
                 link: 'p3'
             }, {
-                text: `Decide it's not worth the risk and fly back to the forest.`,
-                link: 'homeEnd'
-            }
-        ]
-    },
-    p3 : {
-        text: `You swoop down and pluck the cheese from the table. Just as you
-                grab hold of the cheese, the farmer's cat leaps onto the table
-                ahead of you!`,
-        choices: [
-            {
-                text: `Veer off to the left trying to avoid the cat.`,
-                link: 'basketEnd'
-            }, {
-                text: `Fly directly at the cat, full steam ahead!`,
+                text: `Engineering`,
                 link: 'p4'
             }
         ]
     },
-    basketEnd : {
-        text: `You fly directly into a picnic basket, which slams shut behind you.
-                You are stuck until some kind human comes to open the basket.
-                But at least the cat didn't eat you!
-                <br><br>
-                The End`,
+    p3 : {
+        text: `“Computer, have my suit waiting at the airlock.” You say more confidently than you feel. The corridor flies beneath you as you move along the familiar hallway. Has it ever seemed so quiet?
+        <br><br>
+        “Your suit is ready, ${playerName}, however I must advise how dangerous this is to attempt a space walk with no support and a dwindling power supply.”
+        `,
+        choices: [
+            {
+                text: `“I’ll get the engines fixed in no time.”`,
+                link: 'spaceEnd'
+            }, {
+                text: `“you’re probably right. To Engineering!”`,
+                link: 'p4'
+            }
+        ]
+    },
+    spaceEnd : {
+        text: `There is nothing around you but vacuum. Your hands grasp at nothing as the hull of the ship moves away.
+        <br><br>
+        "${playerName}, my sensors indicate that you are no longer on board,” The ship’s computer rings in your ears. “if you don’t reconnect there is nothing I will be able to do to save you.” 
+        <br><br>
+        You drift aimlessly, wishing you had stayed in bed
+        <br><br>
+        The End
+        `,
+        
         choices: [
             {
                 text: `Start over?`,
@@ -129,39 +135,48 @@ var storyData = {
         ]
     },
     p4 : {
-        text: `You zoom towards the cat, who is surprised by the direct approach
-                and leaps off the table. You pull up sharply and make it over the
-                big oak tree to a safe cruising altitude. The sun is shining,
-                the wind is beneath your wings, and you have a beak full of
-                cheese.`,
+        text: `You reach the door to Engineering. All around you the ship shudders and quakes. You open the door and rush in. There are two switches in front of you. 
+        <br><br>
+        “Computer, which one do I pull?”
+        <br><br>
+        “${playerName}, we do not have enough power to run all the systems. You will have to choose. 
+        <br><br>
+        If you get propulsion operational we’ll be able to fly away from here once the engines are repaired. But we will be dead in the water after 5 hours of impulse power. 
+        <br><br>
+        If you return power to the cryosleep chambers, we will stay here but it takes significantly less power to keep you alive. With a distress signal, maybe someone would come to pick you up, ${playerName}, you’d have almost 300 years to wait.” 
+        `,
         choices: [
             {
-                text: `Find somewhere nice to eat your cheese.`,
+                text: `Propulsion, let's get out of here!`,
                 link: 'p5'
+            }, {
+                text:'Cryosleep, I want to wait this out',
+                link:'cryoSleep'
             }
         ]
     },
     p5 : {
-        text: `You find a secluded fence post in the middle of a large field
-                full of wildflowers. You decide this will be a wonderful place
-                to have a snack.
-                <br><br>
-                Just as you settle down you see Mr. Fox strolling down the path
-                towards your fence post.`,
+        text: `The engines hum back to life and the ship shakes more. You hear them now, the screams and shrieks, the whole ship seems to be full of them. 
+        <br><br>
+        “What is that?” 
+        <br><br?
+        “That is the crew, ${playerName} they’re waking up. They’re heading your way. What will you do?`,
         choices: [
             {
-                text: `Say, "Hello Mr. Fox! Join me for cheese."`,
-                link: 'shareCheese'
-            }, {
-                text: `Keep a wary eye on Mr. Fox.`,
+                text: `Run, get out of there!`,
                 link: 'p6'
+            }, {
+                text: `Fight, we can't run forever!`,
+                link: 'p7'
             }
         ]
     },
-    shareCheese : {
-        text: `You hop down to the ground and Mr. Fox helps you break the cheese
-                in half. He is very grateful to you for sharing your cheese, and
-                he gives you a lovely ribbon for your nest.
+    cryoSleep : {
+        text: `You lay back into the pod and wait for the top of the hatch to close. 
+        <br><br>
+        “This will be cold, ${playerName} but it will keep you safe. Hopefully we are rescued soon.” 
+        <br><br>
+        A blast of frigid air and then. Nothing 
                 <br><br>
                 The End`,
         choices: [
@@ -172,16 +187,16 @@ var storyData = {
         ]
     },
     p6 : {
-        text: `Mr. Fox approaches and says, "Hello ${playerName}! It's been so
-                long since we've seen each other. I've missed hearing your
-                lovely singing voice. Won't you sing me a tune before I go?`,
+        text: `The screams echoing in your ears you run down the passage, arms pumping, lungs burning. 
+        <br><br>
+        “They are gaining on you, ${playerName},” the computer says, “You must run faster.”`,
         choices: [
             {
-                text: `Sing a song for Mr. Fox.`,
-                link: 'dropCheeseEnd'
+                text: `Out the airlock, they can't follow you outside, right?`,
+                link: 'spaceEnd'
             }, {
                 text: `Remain silent.`,
-                link: 'p7'
+                link: 'Maybe it is time to fight'
             }
         ]
     },
@@ -199,11 +214,18 @@ var storyData = {
         ]
     },
     p7 : {
-        text: `You remain silent through all of Mr. Fox's flattery. In the end,
-                he knows you won't fall for his tricks, and he leaves you alone.
-                <br><br>
-                Finally able to relax in quiet, you enjoy your well-earned
-                cheese.
+        text: `You stand your ground, you need a weapon. Any weapon. You grope in the dark, looking for something, anything to fight back with. 
+        The sounds are coming closer now, you rip open a door, expecting a closet but it’s the door to the cargo bay. 
+        <br><br>
+        The lights flicker on slowly. 
+        <br><br>
+        “Computer, is that?”
+        <br?<br>
+        “The research shuttle? That is correct ${playerName}, shall I prep it for your departure?”
+        <br><br>
+        “Yes!” You yell, crossing the empty floor as the screams behind you grow louder.  You dive through the airlock door and rush to the bridge pulling levers and pressing buttons. Outside something hammers on the ship, the cockpit shakes under you. “Computer, open hanger doors!” You yell. 
+        <br><br>
+        You hear the doors open, feel the shuttle rocked as it tumbles over and falls out the ship’s gaping mouth. Slowly, the noises fade away. Slowly you realize that you aren’t alone. 
                 <br><br>
                 The End`,
         choices: [
