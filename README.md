@@ -1,4 +1,16 @@
-# WATS 3020 Text Adventure
+# Text Adventure
+
+A basic, choose your own adventure story enhanced with JavaScript
+
+
+
+
+
+
+
+
+
+
 
 In this project, you will be asked to create a simple text adventure game that
 allows a user to make choices that influence the outcome. To accomplish this
