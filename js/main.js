@@ -195,8 +195,8 @@ var storyData = {
                 text: `Out the airlock, they can't follow you outside, right?`,
                 link: 'spaceEnd'
             }, {
-                text: `Remain silent.`,
-                link: 'Maybe it is time to fight'
+                text: `Maybe it is time to fight`,
+                link: 'p7'
             }
         ]
     },
