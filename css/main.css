@@ -29,9 +29,10 @@ button#undo:hover {
     font-size: 0.9rem;
     cursor: pointer;
     margin: 1rem 0;
+    opacity: 1 !important;
 }
 #choices li:hover {
-    background: grey;
+    background: rgb(128, 95, 14);
     color: #fff;
     /* color: #333;
     background: #fff; */
