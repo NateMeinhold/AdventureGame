@@ -87,32 +87,32 @@ var storyData = {
         ]
     },
     p2 : {
-        text: `"Get out of bed, ${playerName}, there is not much time. The engines are damaged and power is shut off to the ship.
+        text: `"You must get out of bed, ${playerName}. There's not much time." The onboard computer said. "The engines are damaged and power is shut off to the ship.
         both systems are necessary for us to get underway. Which one will you fix first?"
         <br><br>
-        You open the door to your cabin and look left and right. One way will take you to Engineering, the other to the Airlock. The ship trembles. You’ll have to work quickly. 
+        You open the door to your cabin and look left and right. One way will take you to Engineering, there the energy core pulses slowly like beating heart. The other to the Airlock, the fastest route to examine the engines. The ship trembles and shudders under your feet. You’ll have to work quickly. 
         `,
         choices: [
             {
-                text: `Space Walk`,
+                text: `Space Walk, let's see how bad the damage is.`,
                 link: 'p3'
             }, {
-                text: `Engineering`,
+                text: `Engineering, let's get the lights on first.`,
                 link: 'p4'
             }
         ]
     },
     p3 : {
-        text: `“Computer, have my suit waiting at the airlock.” You say more confidently than you feel. The corridor flies beneath you as you move along the familiar hallway. Has it ever seemed so quiet?
+        text: `“Computer, have my suit waiting at the airlock. I'm going to inspect the engines.” You say more confidently than you feel. The corridor flies beneath your feet as you move along the familiar hallway. Has the ship ever seemed so quiet? "Where is everyone?"
         <br><br>
-        “Your suit is ready, ${playerName}, however I must advise how dangerous this is to attempt a space walk with no support and a dwindling power supply.”
+        “Crew location is unknown. Your suit is ready, ${playerName}, however I must advise how dangerous this is to attempt a space walk with no support and a dwindling power supply.”
         `,
         choices: [
             {
-                text: `“I’ll get the engines fixed in no time.”`,
+                text: `“Negative. Getting the engines fixed is our top priority.”`,
                 link: 'spaceEnd'
             }, {
-                text: `“you’re probably right. To Engineering!”`,
+                text: `“You’re probably right. Clear the path to engineering, and diagnose the source of the power outtage.”`,
                 link: 'p4'
             }
         ]
@@ -122,7 +122,7 @@ var storyData = {
         <br><br>
         "${playerName}, my sensors indicate that you are no longer on board,” The ship’s computer rings in your ears. “if you don’t reconnect there is nothing I will be able to do to save you.” 
         <br><br>
-        You drift aimlessly, wishing you had stayed in bed
+        You drift aimlessly, wishing you had stayed in bed.
         <br><br>
         The End
         `,
@@ -135,7 +135,7 @@ var storyData = {
         ]
     },
     p4 : {
-        text: `You reach the door to Engineering. All around you the ship shudders and quakes. You open the door and rush in. There are two switches in front of you. 
+        text: `You reach the door to Engineering. All around you the ship shudders and quakes. You open the door and rush in. It's dark but in the gloom you can see there are two switches in front of you. 
         <br><br>
         “Computer, which one do I pull?”
         <br><br>

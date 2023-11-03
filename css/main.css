@@ -2,7 +2,8 @@
 #story-text {
     font-weight: 300;
     font-size: 1.2rem;
-    color: white 
+    color: white ;
+    opacity: 1 !important;
     /* animation: slide-left 10s; */
 }
 button#undo {
@@ -47,11 +48,11 @@ body {
     padding: 3rem 2rem;
     /* background: #fafafa; */
     background: black;
-    opacity: 0.5;
+    opacity: 0.6;
     color: white;
     font-family: Helvetica, Arial, sans-serif;
     border: 4px double #666;
 }
 html {
-    background: #e8e8e8 url('../images/galaxy.jpg') no-repeat fixed center;
+    background: #e8e8e8 url('../images/stars.jpg') no-repeat fixed center;
 }
