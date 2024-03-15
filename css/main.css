@@ -1,59 +1,60 @@
-/* Styles for WATS 3020 Text Adventure */
+/* Styles for Text Adventure Game */
 #story-text {
-    font-weight: 300;
-    font-size: 1.2rem;
-    color: white ;
-    opacity: 1 !important;
-    /* animation: slide-left 10s; */
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: white;
+  opacity: 0.6 !important;
+  /* animation: slide-left 10s; */
 }
 button#undo {
-    border: none;
-    background: none;
-    cursor: pointer;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 button#undo:hover {
-    border: none;
-    background: #333;
-    color: #fff;
+  border: none;
+  background: #333;
+  color: #fff;
 }
 #choices {
-    list-style-type: none;
-    text-align: center;
-    padding-left: 0;
-    white-space: nowrap;
+  list-style-type: none;
+  text-align: center;
+  padding-left: 0;
+  white-space: nowrap;
 }
 #choices li {
-    white-space: normal;
-    padding: 0.5rem;
-    background: #333;
-    font-size: 0.9rem;
-    cursor: pointer;
-    margin: 1rem 0;
-    opacity: 1 !important;
+  white-space: normal;
+  padding: 0.5rem;
+  background: #333;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin: 1rem 0;
+  opacity: 1 !important;
 }
 #choices li:hover {
-    background: rgb(128, 95, 14);
-    color: #fff;
-    /* color: #333;
+  background: rgb(128, 95, 14);
+  color: #fff;
+  /* color: #333;
     background: #fff; */
 }
 
-h1, h2 {
-    font-family: Georgia, "Times New Roman", serif;
-    color: burlywood;
-    opacity: 1 !important;
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: burlywood;
+  opacity: 1 !important;
 }
 body {
-    width: 80%;
-    margin: 1rem auto;
-    padding: 3rem 2rem;
-    /* background: #fafafa; */
-    background: black;
-    opacity: 0.6;
-    color: white;
-    font-family: Helvetica, Arial, sans-serif;
-    border: 4px double #666;
+  width: 80%;
+  margin: 1rem auto;
+  padding: 3rem 2rem;
+  /* background: #fafafa; */
+  background: black;
+  opacity: 0.7;
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  border: 4px double #666;
 }
 html {
-    background: #e8e8e8 url('../images/stars.jpg') no-repeat fixed center;
+  background: #e8e8e8 url("../images/stars.jpg") no-repeat fixed center;
 }
