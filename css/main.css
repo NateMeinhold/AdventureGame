@@ -4,7 +4,7 @@
   font-size: 1.2rem;
   color: white;
   opacity: 0.6 !important;
-  /* animation: slide-left 10s; */
+  animation: slide-left 10s;
 }
 button#undo {
   border: none;
@@ -40,20 +40,49 @@ button#undo:hover {
 
 h1,
 h2 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Helvetica;
   color: burlywood;
-  opacity: 1 !important;
+  opacity: 2 !important;
 }
 body {
+  position: fixed;
+  inset: 0px;
+  margin: auto;
   width: 80%;
-  margin: 1rem auto;
-  padding: 3rem 2rem;
+  height: 80%;
+  /* margin: 1rem auto; */
+
+  padding: 4rem 4rem;
   /* background: #fafafa; */
   background: black;
-  opacity: 0.7;
+  opacity: 1;
   color: white;
-  font-family: Helvetica, Arial, sans-serif;
-  border: 4px double #666;
+  font-family: Helvetica;
+  border: 4px double #8e7418;
+}
+
+.scroll-text {
+  width: 200px; /* Width of the scrolling text */
+  display: inline-block;
+  animation: scroll 10s linear infinite; /* Animation properties */
+  white-space: nowrap;
+}
+
+.scroll-stop {
+  width: 200px; /* Width of the scrolling text */
+  display: inline-block;
+  animation: scroll-stop 5s linear forwards; /* Animation properties */
+  white-space: nowrap;
+  overflow: hidden; /* Clip overflowing text */
+}
+
+@keyframes scroll-stop {
+  0% {
+    transform: translateX(100%);
+  } /* Start from right */
+  100% {
+    transform: translateX(0%);
+  } /* Move to left and stop */
 }
 html {
   background: #e8e8e8 url("../images/stars.jpg") no-repeat fixed center;

@@ -46,8 +46,12 @@ var storyData = {
   p1: {
     text: `"Oh my, you've met with a terrible fate, haven't you, ${playerName}?" The harsh voice said. “I am the ship’s onboard computer. 
         You may not remember, but I am here to help you.”
+        <br><br>
+        "Something has happened, what exactly I cannot say." 
+        <br><br>
+        The automated voice sounded confused, unsettled. What could a bucket of bolts have to be alarmed about?
 
-        <br><br>`,
+        `,
     reply: '"what is this place?"',
     choices: [
       {
